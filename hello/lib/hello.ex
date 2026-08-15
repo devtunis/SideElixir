@@ -1,18 +1,16 @@
 defmodule Hello do
-  @moduledoc """
-  Documentation for `Hello`.
-  """
+  def useplay do
+    IO.puts(String.upcase("hello"))
+    IO.puts(String.downcase("HELLO"))
+    IO.puts(String.length("hello"))
+    name = "ghaith"
+    upperCase = String.upcase(name)
+    IO.puts(upperCase)
+  end
 
-  @doc """
-  Hello world.
+  def usearr do
 
-  ## Examples
-
-      iex> Hello.hello()
-      :world
-
-  """
-  def hello do
-    :world
+    list = [1,2,3]
+    IO.inspect(list)
   end
 end
