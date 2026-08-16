@@ -1,4 +1,6 @@
 defmodule Hello do
+
+
   def useplay do
     IO.puts(String.upcase("hello"))
     IO.puts(String.downcase("HELLO"))
@@ -32,6 +34,14 @@ defmodule Hello do
   def usetuple do
     listOfTuple = {"python","rust","golang"}
     IO.puts(elem(listOfTuple,0))
+
+  end
+
+
+  def keylist(name,option) do
+    IO.inspect(option)
+    "hello "
+
 
   end
 end
