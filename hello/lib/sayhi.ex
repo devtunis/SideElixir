@@ -36,7 +36,21 @@ def usekey(option) do
 
 def usekeywordkey(options) do
   name = Keyword.get(options, :name)
-  IO.puts(name)
+  IO.puts("welcome from use keyword #{name}")
 end
 
+def dustructvalue(options) do
+  isNil = Keyword.get(options,:error)
+  if isNil do
+    IO.puts("has error")
+
+    throw("their error")
+  end
+  IO.puts("continue event loop")
 end
+
+
+end
+
+
+#iex.bat -S mix run -e "Main.go()"
