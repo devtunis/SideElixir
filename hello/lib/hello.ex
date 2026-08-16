@@ -38,10 +38,10 @@ defmodule Hello do
   end
 
 
-  def keylist(name,option) do
-    IO.inspect(option)
-    "hello "
 
-
+ def say_hello do
+    IO.puts("Hello from the Hello module!")
   end
+
+
 end
