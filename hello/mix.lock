@@ -1,0 +1,3 @@
+%{
+  "keyword_validator": {:hex, :keyword_validator, "2.1.0", "03dea179912e9ef280f4784affbfecd12957ef578d88b7aea4bbef68b7db3882", [:mix], [], "hexpm", "9c8cff861cadea92d9b9469983ba58bc35d03a2ceb38c39665e401e8668e324f"},
+}

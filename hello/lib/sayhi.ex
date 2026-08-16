@@ -50,6 +50,31 @@ def dustructvalue(options) do
 end
 
 
+def validateuser( ) do
+
+
+  user = [
+  name: "Ahmed",
+  age: "ss"
+]
+
+schema = [
+  name: [is: :binary, required: true],
+  age: [is: :integer, required: true]
+]
+
+res = KeywordValidator.validate(user, schema)
+IO.puts(res)
+
+if(Keyword.get(res,:error)) do
+  throw("error nike" )
+end
+
+
+
+
+end
+
 end
 
 

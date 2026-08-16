@@ -13,7 +13,7 @@ defmodule Main do
   Sayhi.usekey([{:name,"ghaith"}])
   Sayhi.usekeywordkey([name: "ghaith nahdi"])
   Sayhi.dustructvalue([ok: true , error: false ])
-
+  Sayhi.validateuser()
 
   end
 
