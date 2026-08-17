@@ -21,17 +21,37 @@ def trim(text) do
 
 end
 
+@spec fix_slug(String) ::String
 def fix_slug(text) do
    # dont put any parmas
    # inside the funcs
    # cauz by default it
    #pass the result to next func
    #when finish
-   text |> String.trim()
+    text |> String.trim()
+    #IO.inspect() for debug
     |> String.downcase()
     |> String.replace(" ","-")
+    # |>dbg()
 
 end
 
+#Pattern matching
+
+def patter_matching do
+  user = {"ghaith",21}
+  {name,age}   = user
+  IO.puts("Hello mr #{name} my age #{age}")
+  listUser = ["ghath","fff"]
+  [x,y]  = listUser
+  IO.puts("#{x} => #{y}")
+  foo  = [side: 100]
+  [side: x ] = foo
+  IO.puts(x)
+  pattern = [{:elixir ,100}]
+  [{:elixir , y11}] = pattern
+  IO.inspect(y11)
+
+end
 
 end
