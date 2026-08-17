@@ -87,7 +87,24 @@ def handel_map(game_list,id,newname) ,do:
 
 
 def hande_reduce(arryOfMap) do
-  Enum.reduce(arryOfMap,0,fn x,acc ->x.price+acc end)
+  Enum.reduce(arryOfMap,0,fn item,acc ->item.price+acc end)
+end
+
+def premuimFilter(array) do
+  array
+
+  |>Enum.filter(fn item->  item.price>0.55 end)
+  |>Enum.map(fn item -> cond do item.id==1 -> %{item | name: "ghait"}
+    true->   item end end )
+  |>Enum.reduce(0, fn item,acc -> item.price+acc end)
+  |>dbg()
+
+# |>Enum.find(fn item-> item.id ==3 end)
 
 end
+
+def filter ,do:  fn arr ->   Enum.filter(arr,fn item->item.price>2 end ) end
+
+
+
 end
