@@ -50,7 +50,16 @@ def patter_matching do
   IO.puts(x)
   pattern = [{:elixir ,100}]
   [{:elixir , y11}] = pattern
+  #[elixir: y] = pattern
+  #y
   IO.inspect(y11)
+  user11 = %{:name=>"ghaith" , :age => 29}
+  %{name: x,age: y} = user11
+
+  userOther = %{n: "ghaith",a: 29}
+  %{n: n,a: a} =  userOther
+
+
 
 end
 
