@@ -21,4 +21,17 @@ def trim(text) do
 
 end
 
+def fix_slug(text) do
+   # dont put any parmas
+   # inside the funcs
+   # cauz by default it
+   #pass the result to next func
+   #when finish
+   text |> String.trim()
+    |> String.downcase()
+    |> String.replace(" ","-")
+
+end
+
+
 end
