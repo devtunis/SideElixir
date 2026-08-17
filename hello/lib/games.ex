@@ -56,26 +56,19 @@ def count(game) do
      end
 
 end
-
-
 def count2([]), do: 0
 def count2([head|tail]) ,do: 1 + count2(tail)
-
-
 def price([]), do: 0
 def price([head|tail]) ,do: head.price + count2(tail)
-
 #recompile
 #Games.price(Games.get_all())
 
 #Enum
-
 def handel_filter(game_list) ,do:
   Enum.filter(game_list,fn item ->
 
     item.price>=6  && item.in_stock
   end)
-
 def handel_map(game_list,id,newname) ,do:
   Enum.map(game_list,fn item ->
     cond do
@@ -84,12 +77,9 @@ def handel_map(game_list,id,newname) ,do:
     end
 
   end)
-
-
 def hande_reduce(arryOfMap) do
   Enum.reduce(arryOfMap,0,fn item,acc ->item.price+acc end)
 end
-
 def premuimFilter(array) do
   array
 
@@ -102,9 +92,20 @@ def premuimFilter(array) do
 # |>Enum.find(fn item-> item.id ==3 end)
 
 end
-
 def filter ,do:  fn arr ->   Enum.filter(arr,fn item->item.price>2 end ) end
+def sum ,do:   &(&1+&2)
+def display(v) do
+    Enum.each(v, fn {key,value} ->
+      IO.puts("key #{key} value #{value}")
+    end)
+end
 
+def desrtuctParams(%{name: name ,age: age}) do
+  IO.puts("#{name}  => #{age}")
+end
 
-
+def filter_premium_items(v), do: Enum.filter(v, &(&1.id >= 1 && &1.price > 0.33))
+def extract_prices(v), do: Enum.map(v, & &1.price)
+def find_item_by_id(v), do: Enum.find(v, &(&1.id === 1))
+def calculate_total_price(v), do: Enum.reduce(v, 0, &(&1.price + &2))
 end
