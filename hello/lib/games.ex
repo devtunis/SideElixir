@@ -108,4 +108,16 @@ def filter_premium_items(v), do: Enum.filter(v, &(&1.id >= 1 && &1.price > 0.33)
 def extract_prices(v), do: Enum.map(v, & &1.price)
 def find_item_by_id(v), do: Enum.find(v, &(&1.id === 1))
 def calculate_total_price(v), do: Enum.reduce(v, 0, &(&1.price + &2))
+def shortMap(v) do
+   Enum.map(v, &
+    cond do
+       &1.id==1 -> %{&1 |name: "ghaiht"}
+       true->&1
+
+    end
+   )
+end
+
+
+
 end
