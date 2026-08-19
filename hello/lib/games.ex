@@ -49,7 +49,7 @@ def count(game) do
      if game==[]  do
        0
      else
-      [head|tail] = game
+      [_head|tail] = game
       game  = tail
       1+count(game)
 
@@ -57,7 +57,7 @@ def count(game) do
 
 end
 def count2([]), do: 0
-def count2([head|tail]) ,do: 1 + count2(tail)
+def count2([_|tail]) ,do: 1 + count2(tail)
 def price([]), do: 0
 def price([head|tail]) ,do: head.price + count2(tail)
 #recompile
@@ -117,6 +117,7 @@ def shortMap(v) do
     end
    )
 end
+
 
 
 

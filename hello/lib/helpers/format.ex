@@ -53,11 +53,11 @@ def patter_matching do
   #[elixir: y] = pattern
   #y
   IO.inspect(y11)
-  user11 = %{:name=>"ghaith" , :age => 29}
-  %{name: x,age: y} = user11
+  # user11 = %{:name=>"ghaith" , :age => 29}
+  # %{name: x,age: y} = user11
 
-  userOther = %{n: "ghaith",a: 29}
-  %{n: n,a: a} =  userOther
+  # userOther = %{n: "ghaith",a: 29}
+  # %{n: n,a: a} =  userOther
 
 
 
